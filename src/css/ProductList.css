@@ -1,0 +1,15 @@
+
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
