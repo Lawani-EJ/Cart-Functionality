@@ -4,8 +4,13 @@ import ProductList from './components/ProductList';
 import Detail from './components/Detail';
 import Cart from './components/Cart';
 import { Navbar, Nav } from 'react-bootstrap';
+import { CartContext } from './context/CartContext';
+import { useContext } from "react";
 
 function App() {
+
+  const {cart} = useContext(CartContext)
+
   return (
     <div className="App">
       <Router>
@@ -16,7 +21,7 @@ function App() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link href="/">Shop Page</Nav.Link>
-                <Nav.Link href="/cart">Cart</Nav.Link>
+                <Nav.Link href="/cart">Cart({cart.length})</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
